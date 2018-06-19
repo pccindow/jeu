@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  liquidation_account: 1
+  find_word: MyString
+  word_string: MyString
+  score: 1
+
+two:
+  liquidation_account: 1
+  find_word: MyString
+  word_string: MyString
+  score: 1
