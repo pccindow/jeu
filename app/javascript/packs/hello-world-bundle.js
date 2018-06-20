@@ -1,5 +1,3 @@
-
-import 'css/application.scss';
 import ReactOnRails from 'react-on-rails';
 
 import HelloWorld from './HelloWorld';
