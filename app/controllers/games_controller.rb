@@ -1,6 +1,6 @@
 class GamesController < ApplicationController
   layout "application"
   def index
-    @hello_world_props = { name: "Stranger" }
+    @countdown = { seconds: 30 }
   end
 end
