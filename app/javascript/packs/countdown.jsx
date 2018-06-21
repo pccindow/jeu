@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+var pluralize = require('pluralize');
+window.pluralize = require('pluralize');
 
 export default class Countdown extends React.Component {
   static propTypes = {
@@ -39,11 +41,11 @@ export default class Countdown extends React.Component {
   }
 
   render() {
+  const countdownRun = <h3>Compte à rebours : {`${this.state.seconds} ${pluralize('seconde', this.state.seconds)}`}</h3>
+  const countdownFinish = <h3>Compte à rebours : C'est terminé</h3>
     return (
       <div id="box-content">
-        <h3>
-          Compte à rebours : {this.state.seconds} secondes
-        </h3>
+        {(this.state.seconds == 0) ? countdownFinish : countdownRun}
       </div>
     );
   }
