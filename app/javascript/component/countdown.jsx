@@ -16,7 +16,7 @@ export default class Countdown extends React.Component {
 
     // How to set initial state in ES6 class syntax
     // https://facebook.github.io/react/docs/reusable-components.html#es6-classes
-    this.state = { seconds: 30 };
+    this.state = { seconds: 60 };
     this.decreaseTime = this.decreaseTime.bind(this);
   }
 
@@ -44,7 +44,7 @@ export default class Countdown extends React.Component {
   const countdownRun = <h3>Compte à rebours : {`${this.state.seconds} ${pluralize('seconde', this.state.seconds)}`}</h3>
   const countdownFinish = <h3>Compte à rebours : C'est terminé</h3>
     return (
-      <div id="box-content">
+      <div>
         {(this.state.seconds == 0) ? countdownFinish : countdownRun}
       </div>
     );
